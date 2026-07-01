@@ -1,0 +1,53 @@
+{
+  "name": "sipago-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for SiPago Checkout API",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build:esm-package && pnpm build:esm && pnpm build:cjs",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm-package": "mkdir -p dist/esm && echo '{\"type\":\"module\"}' > dist/esm/package.json",
+    "test": "jest",
+    "typecheck": "tsc -p tsconfig.json",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "keywords": [
+    "sipago",
+    "payments",
+    "checkout",
+    "argentina",
+    "typescript"
+  ],
+  "author": "",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^26.0.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^6.0.3"
+  }
+}
