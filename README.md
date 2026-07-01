@@ -1,6 +1,6 @@
 # sipago-sdk
 
-TypeScript SDK for the [SiPago Checkout API](https://docs.sipago.coop/docs/). Zero runtime dependencies. Works with Node.js 18+.
+**Unofficial** TypeScript SDK for the [SiPago Checkout API](https://docs.sipago.coop/docs/). This project is not affiliated with, endorsed by, or maintained by SiPago or its partners. Zero runtime dependencies. Works with Node.js 18+.
 
 ## Features
 

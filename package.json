@@ -41,7 +41,16 @@
     "argentina",
     "typescript"
   ],
-  "author": "",
+  "author": "andresfiloso",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andresfiloso/sipago-sdk.git"
+  },
+  "homepage": "https://github.com/andresfiloso/sipago-sdk",
+  "bugs": "https://github.com/andresfiloso/sipago-sdk/issues",
+  "publishConfig": {
+    "access": "public"
+  },
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
     "@types/jest": "^29.5.14",
